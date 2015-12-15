@@ -1,0 +1,17 @@
+<h2>this is the edit page for items</h2>
+
+<p><%= link_to 'Back to items', items_path %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <%= form_for @item do |f| %>
+    <tr>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.text_field :price %></td>
+      <td><%= f.submit 'Submit', class: "button round" %></td>
+    </tr>
+  <%- end -%>
+</table>
