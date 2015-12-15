@@ -1,0 +1,14 @@
+<h2>show page</h2>
+
+<p><%= link_to 'Back to Items', items_path %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td><%= @item.name %></td>
+    <td><%= @item.price %></td>
+  </tr>
+</table>
