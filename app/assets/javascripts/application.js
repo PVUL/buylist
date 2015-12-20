@@ -16,3 +16,11 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+  $('.reveal').on('click', 'button', function(){
+    $(this).closest('.item').find('.price').toggle();
+  });
+
+
+});
