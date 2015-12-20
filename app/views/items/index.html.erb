@@ -11,11 +11,14 @@
 
   <% @items.each do |item| %>
   <tr>
-    <td><%= link_to "#{item.name}", item_path(item) %></td>
+    <td><%= link_to "#{item.name}", item_path(item), id: "show", remote: true %></td>
     <td><%= item.price %></td>
     <td><%= item.created_at.strftime('%m/%d/%y') %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Delete', item_path(item), method: :delete %></td>
+  </tr>
+  <tr>
+    <% render 'show', :@item => item %>
   </tr>
   <%- end -%>
 </table>
